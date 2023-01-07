@@ -207,3 +207,12 @@ ur = 1572
 parseFloat(ur)
 
 console.log(ur)
+
+function Persona (nombre, edad, calle) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.calle = calle;
+}
+
+const persona1 = new Persona (juan, 20, Cerrito)
+
