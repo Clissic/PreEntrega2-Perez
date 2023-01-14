@@ -1,4 +1,4 @@
-do {
+/* do {
   option = parseInt(
     prompt(
       "SIMULADORES:\n1 - Calcular IMC. \n2 - Calcular intereses de préstamo. \n3 - Convertidor de °C a °F. \n4 - Salir. \nIngrese la opcion:"
@@ -59,4 +59,51 @@ do {
       break;
   }
 } while (option != 4);
-alert("Hasta luego... un saludo para Moto Moto.");
+alert("Hasta luego..."); */
+
+    //Función CONSTRUCTORA
+    function Producto(recomendado, masVendido, novedad, categoria, tipo, color, marca, precio, talle, sexo, edad) {
+      this.recomendado = recomendado;
+      this.masVendido = masVendido;
+      this.novedad = novedad;
+      this.categoria = categoria;
+      this.tipo = tipo;
+      this.color = color;
+      this.marca = marca;
+      this.precio = precio;
+      this.talle = talle;
+      this.sexo = sexo;
+      this.edad = edad;
+  
+      
+      // Metodo
+      this.descuentoIva = function(precio) {
+          this.precio = precio - (precio * 0.21)
+          console.log("Este " + this.tipo + " con el descuento del IVA cuesta ahora " + this.precio)
+      }
+  }
+  
+  let arrayCounter = 0
+  let crearProducto = document.getElementById("crearProductoId")
+  crearProducto.addEventListener("click", respuestaClick)
+  function respuestaClick() {
+  
+  arrayName = "prod" + arrayCounter
+  
+      let recomendado = document.getElementById("recomendadoId").value
+      let masVendido = document.getElementById("masVendidoId").value
+      let novedad = document.getElementById("novedadId").value
+      let categoria = document.getElementById("categoriaId").value
+      let tipo = document.getElementById("tipoId").value
+      let color = document.getElementById("colorId").value
+      let marca = document.getElementById("marcaId").value
+      let precio = parseFloat(document.getElementById("precioId").value)
+      let talle = document.getElementById("talleId").value
+      let sexo = document.getElementById("sexoId").value
+      let edad = document.getElementById("edadId").value
+  
+      var arrayName = new Producto(recomendado,masVendido,novedad,categoria,tipo,color,marca,precio,talle,sexo,edad)
+      console.log(arrayName)
+  
+      arrayCounter++
+  }

@@ -7,7 +7,106 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="https://i.kym-cdn.com/entries/icons/original/000/028/916/Screen_Shot_2019-03-14_at_2.43.33_PM.png" alt="moto moto" srcset="">
+    <h1>Crea un nuevo producto para la tienda:</h1>
+    <p>A continuación se deben completar las características del producto</p>
+    <br>
+    <div>
+        <label for="recomendado">Es recomendada?</label>
+        <select name="recomendado" id="recomendadoId">
+            <option value="true">SI</option>
+            <option value="false">NO</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="masVendido">La prenda es de lo mas vendido?</label>
+        <select name="masVendido" id="masVendidoId">
+            <option value="true">SI</option>
+            <option value="false">NO</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="novedad">La prenda es una novedad?</label>
+        <select name="novedad" id="novedadId">
+            <option value="true">SI</option>
+            <option value="false">NO</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="categoria">Ingresa la categoria del producto:</label>
+        <br>
+        <select name="categoria" id="categoriaId">
+            <option value="ropa">ROPA</option>
+            <option value="accesorio">ACCESORIO</option>
+            <option value="bolso">BOLSO</option>
+            <option value="ropa interior">ROPA INTERIOR</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="tipo">Que tipo de prenda es?</label>
+        <br>
+        <input type="text" name="tipo" id="tipoId">
+        <br>
+        <label for="tipo">(Ej. remera, pantalon, gorro, etc.)</label>
+    </div>
+    <br>
+    <div>
+        <label for="color">Elige el color del producto:</label>
+        <input type="color" name="color" id="colorId">
+    </div>
+    <br>
+    <div>
+        <label for="marca">Elige la marca del producto:</label>
+        <br>
+        <select name="marca" id="marcaId">
+            <option value="tommy hilfiger">TOMMY HILFIGER</option>
+            <option value="lacoste">LACOSTE</option>
+            <option value="polo">POLO RALPH LAUREN</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="precio">Ingresa el precio en dolares:</label>
+        <br>
+        <input type="number" name="precio" id="precioId">
+    </div>
+    <br>
+    <div>
+        <label for="talle">Elgie el talle:</label>
+        <select name="talle" id="talleId">
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="sexo">Para que sexo es la prenda?</label>
+        <br>
+        <select name="sexo" id="sexoId">
+            <option value="hombre">HOMBRE</option>
+            <option value="mujer">MUJER</option>
+            <option value="unisex">UNISEX</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="edad">Es para adulto o niño?</label>
+        <br>
+        <select name="edad" id="edadId">
+            <option value="adulto">ADULTO</option>
+            <option value="ninio">NIÑO</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <input type="button" value="CREAR" id="crearProductoId">
+    </div>
+    <script src="./simulador.js"></script>
 </body>
-<script src="./simulador.js"></script>
 </html>
