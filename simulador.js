@@ -83,12 +83,11 @@ alert("Hasta luego..."); */
       }
   }
   
-  let arrayCounter = 0
+  let arrayCounter = 0  
+  arrayName = "prod" + arrayCounter
   let crearProducto = document.getElementById("crearProductoId")
   crearProducto.addEventListener("click", respuestaClick)
   function respuestaClick() {
-  
-  arrayName = "prod" + arrayCounter
   
       let recomendado = document.getElementById("recomendadoId").value
       let masVendido = document.getElementById("masVendidoId").value
@@ -102,8 +101,22 @@ alert("Hasta luego..."); */
       let sexo = document.getElementById("sexoId").value
       let edad = document.getElementById("edadId").value
   
-      var arrayName = new Producto(recomendado,masVendido,novedad,categoria,tipo,color,marca,precio,talle,sexo,edad)
+      let arrayName = new Producto(recomendado,masVendido,novedad,categoria,tipo,color,marca,precio,talle,sexo,edad)
+
       console.log(arrayName)
-  
+
+      const tableItems = document.getElementById("tableItems")
+      tableItems.innerHTML += 
+        `
+        <td>${categoria}</td>
+        <td>${tipo}</td>
+        <td>${color}</td>
+        <td>${marca}</td>
+        <td>$${precio}</td>
+        <td>${talle}</td>
+        <td>${sexo}</td>
+        <td>${edad}</td>
+        `
+
       arrayCounter++
   }

@@ -38,10 +38,10 @@
         <label for="categoria">Ingresa la categoria del producto:</label>
         <br>
         <select name="categoria" id="categoriaId">
-            <option value="ropa">ROPA</option>
-            <option value="accesorio">ACCESORIO</option>
-            <option value="bolso">BOLSO</option>
-            <option value="ropa interior">ROPA INTERIOR</option>
+            <option value="Ropa">ROPA</option>
+            <option value="Accesorio">ACCESORIO</option>
+            <option value="Bolso">BOLSO</option>
+            <option value="Ropa interior">ROPA INTERIOR</option>
         </select>
     </div>
     <br>
@@ -62,9 +62,9 @@
         <label for="marca">Elige la marca del producto:</label>
         <br>
         <select name="marca" id="marcaId">
-            <option value="tommy hilfiger">TOMMY HILFIGER</option>
-            <option value="lacoste">LACOSTE</option>
-            <option value="polo">POLO RALPH LAUREN</option>
+            <option value="Tommy Hilfiger">TOMMY HILFIGER</option>
+            <option value="Lacoste">LACOSTE</option>
+            <option value="Polo Ralph Lauren">POLO RALPH LAUREN</option>
         </select>
     </div>
     <br>
@@ -77,11 +77,11 @@
     <div>
         <label for="talle">Elgie el talle:</label>
         <select name="talle" id="talleId">
-            <option value="xs">XS</option>
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="l">L</option>
-            <option value="xl">XL</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
         </select>
     </div>
     <br>
@@ -89,9 +89,9 @@
         <label for="sexo">Para que sexo es la prenda?</label>
         <br>
         <select name="sexo" id="sexoId">
-            <option value="hombre">HOMBRE</option>
-            <option value="mujer">MUJER</option>
-            <option value="unisex">UNISEX</option>
+            <option value="Hombre">HOMBRE</option>
+            <option value="Mujer">MUJER</option>
+            <option value="Unisex">UNISEX</option>
         </select>
     </div>
     <br>
@@ -99,14 +99,32 @@
         <label for="edad">Es para adulto o niño?</label>
         <br>
         <select name="edad" id="edadId">
-            <option value="adulto">ADULTO</option>
-            <option value="ninio">NIÑO</option>
+            <option value="Adulto">ADULTO</option>
+            <option value="Niño">NIÑO</option>
         </select>
     </div>
     <br>
     <div>
         <input type="button" value="CREAR" id="crearProductoId">
     </div>
+    <br>
+    <h2>Tabla de productos agregados:</h2>
+    <br>
+    <table>
+        <thead>
+            <th>Categoría</th>
+            <th>Tipo</th>
+            <th>Color</th>
+            <th>Marca</th>
+            <th>Precio</th>
+            <th>Talle</th>
+            <th>Sexo</th>
+            <th>Edad</th>
+        </thead>
+        <tbody id="tableItems">
+
+        </tbody>
+    </table>
     <script src="./simulador.js"></script>
 </body>
 </html>
