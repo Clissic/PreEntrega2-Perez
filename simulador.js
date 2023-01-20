@@ -78,8 +78,9 @@ alert("Hasta luego..."); */
       
       // Metodo
       this.descuentoIva = function(precio) {
-          this.precio = precio - (precio * 0.21)
-          console.log("Este " + this.tipo + " con el descuento del IVA cuesta ahora " + this.precio)
+          let descuento = this.precio = precio - (precio * 0.21)
+          console.log("Este " + this.tipo + " con el descuento del IVA cuesta ahora " + descuento)
+          return descuento
       }
   }
   
@@ -100,10 +101,16 @@ alert("Hasta luego..."); */
       let talle = document.getElementById("talleId").value
       let sexo = document.getElementById("sexoId").value
       let edad = document.getElementById("edadId").value
+      let descuentoIva = document.getElementById("descuentoIvaId").value
   
       let arrayName = new Producto(recomendado,masVendido,novedad,categoria,tipo,color,marca,precio,talle,sexo,edad)
 
-      console.log(arrayName)
+      if (descuentoIva === "Si") {
+        precio = arrayName.descuentoIva(precio)
+      } 
+      else {
+        arrayName.precio == precio
+      }
 
       const tableItems = document.getElementById("tableItems")
       tableItems.innerHTML += 
@@ -116,7 +123,9 @@ alert("Hasta luego..."); */
         <td>${talle}</td>
         <td>${sexo}</td>
         <td>${edad}</td>
+        <td>${descuentoIva}</td>
         `
 
       arrayCounter++
+
   }
